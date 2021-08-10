@@ -10801,8 +10801,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326180987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.211012, y: 95.289986, z: 924.26013}
-  m_LocalScale: {x: 3, y: 20, z: 15}
+  m_LocalPosition: {x: 11.211012, y: 89.289986, z: 924.26013}
+  m_LocalScale: {x: 3, y: 30, z: 25}
   m_Children: []
   m_Father: {fileID: 1298930461}
   m_RootOrder: 6
@@ -11024,7 +11024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388441165}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 56, y: -65.63, z: 1066.7999}
+  m_LocalPosition: {x: 56, y: -76.52, z: 1066.7999}
   m_LocalScale: {x: 65, y: 5, z: 150}
   m_Children: []
   m_Father: {fileID: 2022943509}
@@ -16132,8 +16132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692196762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 102.5, z: 974.1}
-  m_LocalScale: {x: 3, y: 20, z: 15}
+  m_LocalPosition: {x: 8, y: 96.5, z: 974.1}
+  m_LocalScale: {x: 3, y: 30, z: 25}
   m_Children: []
   m_Father: {fileID: 1298930461}
   m_RootOrder: 5
@@ -28860,9 +28860,9 @@ MonoBehaviour:
   wallrunForce: 17500
   maxWallrunTime: 5
   maxWallSpeed: 20000
-  maxWallRunCameraTilt: 5
-  wallRunCameraTilt: 3
-  wallRunUpwardForce: 2500
+  maxWallRunCameraTilt: 10
+  wallRunCameraTilt: 5
+  wallRunUpwardForce: 3000
   wallrunForwardMultiplier: 1.4
   playerCam: {fileID: 183140194}
   orientation: {fileID: 1051017869}
@@ -28884,7 +28884,7 @@ MonoBehaviour:
   startDoubleJumps: 4
   x: 0
   y: 0
-  dashForce: 5000
+  dashForce: 7500
   dashCooldown: 5
   dashTime: 1
   allowDashForceCounter: 0
@@ -28897,6 +28897,7 @@ MonoBehaviour:
   readyToRocket: 0
   alreadyInvokedRockedStop: 0
   rocketTimer: 0
+  rocketUpwardMultiplier: 2
   maxSonicSpeed: 20000
   sonicSpeedForce: 2000
   timeBetweenNextSonicBoost: 0.55
@@ -29044,6 +29045,7 @@ MonoBehaviour:
   epicFloat: 30
   useFullBool: 0
   redoFov: 70
+  velocity: 0
   minFOV: 85
   maxFOV: 95
   changeIncrement: 0.3
@@ -29397,6 +29399,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871746807}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1888211540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888211543}
+  - component: {fileID: 1888211542}
+  - component: {fileID: 1888211541}
+  m_Layer: 6
+  m_Name: Guide Text 6 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &1888211541
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888211540}
+  m_Text: "you can use all of your skills that you learned previously\n                           
+    in future floors"
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 115
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 1eb05ff8a050c6a46971c2dac7c4f1b8, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1888211542
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888211540}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1eb05ff8a050c6a46971c2dac7c4f1b8, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &1888211543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888211540}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20, y: -90, z: 270}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022943509}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1889459324
 GameObject:
   m_ObjectHideFlags: 0
@@ -30259,6 +30357,7 @@ Transform:
   - {fileID: 2003296375}
   - {fileID: 177190310}
   - {fileID: 388441166}
+  - {fileID: 1888211543}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
