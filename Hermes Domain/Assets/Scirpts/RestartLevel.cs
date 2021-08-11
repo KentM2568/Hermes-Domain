@@ -12,6 +12,7 @@ public class RestartLevel : MonoBehaviour
     public KeyCode restartKey = KeyCode.R;
     public Rigidbody rb;
     public GameObject grapplehookObject;
+    public GameObject playerObject;
 
 
     void Update()
@@ -21,10 +22,12 @@ public class RestartLevel : MonoBehaviour
 
     void Restart()
     {
+        WallRunTutorial playerScript = playerObject.GetComponent<WallRunTutorial>();
         if (Input.GetKeyDown(restartKey))
         {
             player.transform.position = restartPoint.transform.position;
             rb.velocity = new Vector3(0, 0, 0);
+    //        playerScript.flashCooldown = 1;
         }
 
     }
@@ -32,9 +35,11 @@ public class RestartLevel : MonoBehaviour
     public void RestartWithoutKey()
     {
 
+        WallRunTutorial playerScript = playerObject.GetComponent<WallRunTutorial>();
         player.transform.position = restartPoint.transform.position;
         rb.velocity = new Vector3(0, 0, 0);
-   //     grapplehookObject.SetAcitve(false);
+        //     grapplehookObject.SetAcitve(false);
+//        playerScript.flashCooldown = 1;
 
 
 

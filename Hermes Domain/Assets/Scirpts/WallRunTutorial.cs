@@ -548,6 +548,8 @@ public class WallRunTutorial : MonoBehaviour
             Invoke("ResetFlash", flashCooldown);
             alreadySubtractedFlash = true;
         }
+
+        flashCooldown = 1;
     }
     private void ResetFlash()
     {
