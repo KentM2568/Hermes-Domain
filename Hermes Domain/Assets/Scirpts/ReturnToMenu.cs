@@ -21,8 +21,8 @@ public class ReturnToMenu : MonoBehaviour
         {
             PauseMenu.gameIsPaused = true;
             pauseScript.QuitToMainMenu();
-    //        Cursor.lockState = CursorLockMode.None;
-      //      Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
     }

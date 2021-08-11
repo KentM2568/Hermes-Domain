@@ -402,13 +402,13 @@ public class WallRunTutorial : MonoBehaviour
             rb.AddForce(normalVector * jumpForce * 0.5f);
             rb.AddForce(orientation.forward * y * rb.velocity.magnitude  * 0.75f);
 
-            //If jumping while falling, reset y velocity.
+        /*    //If jumping while falling, reset y velocity.
             Vector3 vel = rb.velocity;
             if (rb.velocity.y < 0.5f)
                 rb.velocity = new Vector3(vel.x, 0, vel.z);
             else if (rb.velocity.y > 0)
                 rb.velocity = new Vector3(vel.x, vel.y / 2, vel.z);
-
+        */
             Invoke(nameof(ResetJump), jumpCooldown);
         }
         if (!grounded)
@@ -423,7 +423,7 @@ public class WallRunTutorial : MonoBehaviour
             rb.AddForce(normalVector * jumpForce * 0.5f);
 
             //Reset Velocity
-            rb.velocity = Vector3.zero;
+         //   rb.velocity = Vector3.zero;
 
             //Disable dashForceCounter if doublejumping while dashing
             allowDashForceCounter = false;
@@ -549,7 +549,7 @@ public class WallRunTutorial : MonoBehaviour
             alreadySubtractedFlash = true;
         }
 
-        flashCooldown = 1;
+   //     flashCooldown = 30;
     }
     private void ResetFlash()
     {

@@ -31093,6 +31093,7 @@ MonoBehaviour:
   restartKey: 114
   rb: {fileID: 1682459321}
   grapplehookObject: {fileID: 0}
+  playerObject: {fileID: 1682459318}
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0

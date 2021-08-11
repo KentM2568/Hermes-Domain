@@ -63239,7 +63239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2ee2e6d10d2af8742b24febd4dc988a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63472,8 +63472,8 @@ MonoBehaviour:
   wallrunForce: 20000
   maxWallrunTime: 5
   maxWallSpeed: 20000
-  maxWallRunCameraTilt: 5
-  wallRunCameraTilt: 3
+  maxWallRunCameraTilt: 10
+  wallRunCameraTilt: 5
   wallRunUpwardForce: 500
   wallrunForwardMultiplier: 1
   playerCam: {fileID: 183140194}
