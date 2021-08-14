@@ -302,7 +302,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
   respawnPoint: {fileID: 1293735768}
-  grapplehookObject: {fileID: 0}
+  grapplehookObject: {fileID: 260847305}
+  hookBoxObject1: {fileID: 419807279}
+  hookBoxObject2: {fileID: 1453507397}
+  hookBoxObject3: {fileID: 1126381538}
+  hookBoxObject4: {fileID: 441348118}
+  hookBoxObject5: {fileID: 1363310210}
+  hookBoxObject6: {fileID: 1071950483}
+  hookBoxObject7: {fileID: 166644388}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &65737195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17048,6 +17056,14 @@ MonoBehaviour:
   player: {fileID: 1682459319}
   respawnPoint: {fileID: 1248052245}
   grapplehookObject: {fileID: 260847305}
+  hookBoxObject1: {fileID: 419807279}
+  hookBoxObject2: {fileID: 1453507397}
+  hookBoxObject3: {fileID: 1126381538}
+  hookBoxObject4: {fileID: 441348118}
+  hookBoxObject5: {fileID: 1363310210}
+  hookBoxObject6: {fileID: 1071950483}
+  hookBoxObject7: {fileID: 166644388}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &867964718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30928,12 +30944,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   wallrunForce: 12500
-  maxWallrunTime: 5
-  maxWallSpeed: 20000
-  maxWallRunCameraTilt: 5
-  wallRunCameraTilt: 3
+  maxWallrunTime: 10
+  maxWallSpeed: 300
+  maxWallRunCameraTilt: 15
+  wallRunCameraTilt: 10
   wallRunUpwardForce: 100
-  wallrunForwardMultiplier: 1.1
+  wallrunForwardMultiplier: 1.25
   playerCam: {fileID: 183140194}
   orientation: {fileID: 1051017869}
   moveSpeed: 9000
@@ -31092,8 +31108,17 @@ MonoBehaviour:
   restartPoint: {fileID: 1293735768}
   restartKey: 114
   rb: {fileID: 1682459321}
-  grapplehookObject: {fileID: 0}
+  grapplehookObject: {fileID: 260847305}
   playerObject: {fileID: 1682459318}
+  hookBoxObject1: {fileID: 419807279}
+  hookBoxObject2: {fileID: 1453507397}
+  hookBoxObject3: {fileID: 1126381538}
+  hookBoxObject4: {fileID: 441348118}
+  hookBoxObject5: {fileID: 1363310210}
+  hookBoxObject6: {fileID: 1071950483}
+  hookBoxObject7: {fileID: 166644388}
+  grapplingPickUpObject: {fileID: 844365882}
+  restartedLevel: 0
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0

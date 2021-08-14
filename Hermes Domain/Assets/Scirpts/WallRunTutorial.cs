@@ -95,6 +95,8 @@ public class WallRunTutorial : MonoBehaviour
     public int extraGrappleSpeed;
     public static bool isGrappling;
 
+ //   public Vector2 velocityFloat = rb.velocity.magnitude.ToFloat();
+
 
     public float counterMovement = 0.175f;
     private float threshold = 0.01f;
@@ -214,7 +216,7 @@ public class WallRunTutorial : MonoBehaviour
         CheckForWall();
         SonicSpeed();
         WallRunInput();
-    //   Debug.Log(rb.velocity.magnitude.ToString());
+     /// Debug.Log(rb.velocity.magnitude.ToString());
     }
 
     /// <summary>
@@ -398,8 +400,8 @@ public class WallRunTutorial : MonoBehaviour
             readyToJump = false;
 
             //Add jump forces
-            rb.AddForce(Vector2.up * jumpForce * 1.5f);
-            rb.AddForce(normalVector * jumpForce * 0.5f);
+            rb.AddForce(Vector2.up * jumpForce * 1f * rb.velocity.magnitude / (rb.velocity.magnitude / 1.2f));
+            rb.AddForce(normalVector * jumpForce * 1f * rb.velocity.magnitude / (rb.velocity.magnitude / 1.2f));
             rb.AddForce(orientation.forward * y * rb.velocity.magnitude  * 0.75f);
 
         /*    //If jumping while falling, reset y velocity.
@@ -416,11 +418,11 @@ public class WallRunTutorial : MonoBehaviour
             readyToJump = false;
 
             //Add jump forces
-            rb.AddForce(orientation.forward * y * rb.velocity.magnitude * 1f * jumpExtraForwardForce);
-            rb.AddForce(orientation.right * x * rb.velocity.magnitude * 1f * jumpExtraSideForce);
+            rb.AddForce(orientation.forward * y * rb.velocity.magnitude * 1f * jumpExtraForwardForce / (rb.velocity.magnitude / 5f));
+            rb.AddForce(orientation.right * x * rb.velocity.magnitude * 1f * jumpExtraSideForce / (rb.velocity.magnitude / 5f));
 
-            rb.AddForce(Vector2.up * jumpForce * 1.5f);
-            rb.AddForce(normalVector * jumpForce * 0.5f);
+            rb.AddForce(Vector2.up * jumpForce * 1.5f );
+            rb.AddForce(normalVector * jumpForce * 1f);
 
             //Reset Velocity
          //   rb.velocity = Vector3.zero;

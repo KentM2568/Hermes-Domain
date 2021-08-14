@@ -105,7 +105,7 @@ public class SpeedEffect : MonoBehaviour
             Zoom();
         }
 
-        Debug.Log(velocity.ToString());
+     //   Debug.Log(velocity.ToString());
     }
 
 

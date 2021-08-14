@@ -13,6 +13,16 @@ public class RestartLevel : MonoBehaviour
     public Rigidbody rb;
     public GameObject grapplehookObject;
     public GameObject playerObject;
+    public GameObject hookBoxObject1;
+    public GameObject hookBoxObject2;
+    public GameObject hookBoxObject3;
+    public GameObject hookBoxObject4;
+    public GameObject hookBoxObject5;
+    public GameObject hookBoxObject6;
+    public GameObject hookBoxObject7;
+    public GameObject grapplingPickUpObject;
+
+    public bool restartedLevel = false;
 
 
     void Update()
@@ -20,28 +30,89 @@ public class RestartLevel : MonoBehaviour
         Restart();
     }
 
+    void LateUpdate()
+    {
+  //      restartedLevel = false;
+    }
+
     void Restart()
     {
         WallRunTutorial playerScript = playerObject.GetComponent<WallRunTutorial>();
+        HermesWingsPickup hermesWingsScript = playerObject.GetComponent<HermesWingsPickup>();
+        HermesBootsPickup hermesBootsScript = playerObject.GetComponent<HermesBootsPickup>();
         if (Input.GetKeyDown(restartKey))
         {
             player.transform.position = restartPoint.transform.position;
             rb.velocity = new Vector3(0, 0, 0);
-    //        playerScript.flashCooldown = 1;
+            grapplehookObject.SetActive(false);
+            grapplingPickUpObject.SetActive(true);
+
+            hookBoxObject1.SetActive(true);
+            hookBoxObject2.SetActive(true);
+            hookBoxObject3.SetActive(true);
+            hookBoxObject4.SetActive(true);
+            hookBoxObject5.SetActive(true);
+            hookBoxObject6.SetActive(true);
+            hookBoxObject7.SetActive(true);
+            
+            if (hermesWingsScript.hasAbsorbedHermesWings == true)
+            {
+               restartedLevel = true;
+            }
+
+            if (hermesBootsScript.hasAbsorbedHermesBoots == true)
+            {
+                restartedLevel = true;
+            }
+
+            Debug.Log("Restarted");
+            /*
+                        playerScript.startDoubleJumps -= 1 * extraJumpMultiplier;
+                        playerScript.jumpForce -= 500;
+                        playerScript.jumpExtraForwardForce -= jumpExtraForwardForceMultiplier;
+
+
+                        hermesWingsScript.hasAbsorbedHermesWings = false;
+                        //        playerScript.flashCooldown = 1;
+            */
         }
 
     }
 
     public void RestartWithoutKey()
     {
+        HermesWingsPickup hermesWingsScript = playerObject.GetComponent<HermesWingsPickup>();
+        HermesBootsPickup hermesBootsScript = playerObject.GetComponent<HermesBootsPickup>();
 
         WallRunTutorial playerScript = playerObject.GetComponent<WallRunTutorial>();
         player.transform.position = restartPoint.transform.position;
         rb.velocity = new Vector3(0, 0, 0);
-        //     grapplehookObject.SetAcitve(false);
-//        playerScript.flashCooldown = 1;
+        grapplehookObject.SetActive(false);
+        grapplingPickUpObject.SetActive(true);
+        hookBoxObject1.SetActive(true);
+        hookBoxObject2.SetActive(true);
+        hookBoxObject3.SetActive(true);
+        hookBoxObject4.SetActive(true);
+        hookBoxObject5.SetActive(true);
+        hookBoxObject6.SetActive(true);
+        hookBoxObject7.SetActive(true);
+        Debug.Log("Restarted Without Key");
+       
+        if (hermesWingsScript.hasAbsorbedHermesWings == true)
+        {
+            restartedLevel = true;
+        }
+
+        if (hermesBootsScript.hasAbsorbedHermesBoots == true)
+        {
+            restartedLevel = true;
+        }
+        //        playerScript.flashCooldown = 1;
 
 
 
     }
+
 }
+
+

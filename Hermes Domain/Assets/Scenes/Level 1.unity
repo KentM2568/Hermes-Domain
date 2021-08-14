@@ -253,7 +253,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
   respawnPoint: {fileID: 1293735768}
-  grapplehookObject: {fileID: 0}
+  grapplehookObject: {fileID: 260847305}
+  hookBoxObject1: {fileID: 597666944}
+  hookBoxObject2: {fileID: 201249291}
+  hookBoxObject3: {fileID: 1834580178}
+  hookBoxObject4: {fileID: 171642979}
+  hookBoxObject5: {fileID: 597666944}
+  hookBoxObject6: {fileID: 597666944}
+  hookBoxObject7: {fileID: 597666944}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &65737195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21283,8 +21291,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
-  respawnPoint: {fileID: 1248052245}
-  grapplehookObject: {fileID: 0}
+  respawnPoint: {fileID: 1293735768}
+  grapplehookObject: {fileID: 260847305}
+  hookBoxObject1: {fileID: 597666944}
+  hookBoxObject2: {fileID: 201249291}
+  hookBoxObject3: {fileID: 1834580178}
+  hookBoxObject4: {fileID: 171642979}
+  hookBoxObject5: {fileID: 597666944}
+  hookBoxObject6: {fileID: 597666944}
+  hookBoxObject7: {fileID: 597666944}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &867964718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37852,7 +37868,7 @@ MonoBehaviour:
     m_Bits: 128
   wallrunForce: 15000
   maxWallrunTime: 5
-  maxWallSpeed: 20000
+  maxWallSpeed: 200
   maxWallRunCameraTilt: 10
   wallRunCameraTilt: 5
   wallRunUpwardForce: 100
@@ -38016,7 +38032,16 @@ MonoBehaviour:
   restartKey: 114
   rb: {fileID: 1682459321}
   grapplehookObject: {fileID: 260847305}
-  playerObject: {fileID: 0}
+  playerObject: {fileID: 1682459318}
+  hookBoxObject1: {fileID: 597666944}
+  hookBoxObject2: {fileID: 201249291}
+  hookBoxObject3: {fileID: 1834580178}
+  hookBoxObject4: {fileID: 171642979}
+  hookBoxObject5: {fileID: 201249291}
+  hookBoxObject6: {fileID: 201249291}
+  hookBoxObject7: {fileID: 597666944}
+  grapplingPickUpObject: {fileID: 1942186250}
+  restartedLevel: 0
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43285,6 +43310,14 @@ MonoBehaviour:
   player: {fileID: 1682459319}
   respawnPoint: {fileID: 1293735768}
   grapplehookObject: {fileID: 260847305}
+  hookBoxObject1: {fileID: 597666944}
+  hookBoxObject2: {fileID: 201249291}
+  hookBoxObject3: {fileID: 1834580178}
+  hookBoxObject4: {fileID: 171642979}
+  hookBoxObject5: {fileID: 597666944}
+  hookBoxObject6: {fileID: 597666944}
+  hookBoxObject7: {fileID: 597666944}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &2065484758
 BoxCollider:
   m_ObjectHideFlags: 0

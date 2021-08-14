@@ -15144,7 +15144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
   respawnPoint: {fileID: 1878689502}
-  grapplehookObject: {fileID: 0}
+  grapplehookObject: {fileID: 183140193}
+  hookBoxObject1: {fileID: 804750681}
+  hookBoxObject2: {fileID: 804750681}
+  hookBoxObject3: {fileID: 804750681}
+  hookBoxObject4: {fileID: 804750681}
+  hookBoxObject5: {fileID: 804750681}
+  hookBoxObject6: {fileID: 804750681}
+  hookBoxObject7: {fileID: 804750681}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &356456984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30960,8 +30968,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
-  respawnPoint: {fileID: 166991267}
-  grapplehookObject: {fileID: 0}
+  respawnPoint: {fileID: 1878689502}
+  grapplehookObject: {fileID: 183140193}
+  hookBoxObject1: {fileID: 804750681}
+  hookBoxObject2: {fileID: 804750681}
+  hookBoxObject3: {fileID: 804750681}
+  hookBoxObject4: {fileID: 804750681}
+  hookBoxObject5: {fileID: 804750681}
+  hookBoxObject6: {fileID: 804750681}
+  hookBoxObject7: {fileID: 804750681}
+  playerObject: {fileID: 1682459318}
 --- !u!65 &1152139343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37529,6 +37545,15 @@ MonoBehaviour:
   rb: {fileID: 1682459321}
   grapplehookObject: {fileID: 260847305}
   playerObject: {fileID: 1682459318}
+  hookBoxObject1: {fileID: 804750681}
+  hookBoxObject2: {fileID: 804750681}
+  hookBoxObject3: {fileID: 804750681}
+  hookBoxObject4: {fileID: 804750681}
+  hookBoxObject5: {fileID: 804750681}
+  hookBoxObject6: {fileID: 804750681}
+  hookBoxObject7: {fileID: 804750681}
+  grapplingPickUpObject: {fileID: 482823089}
+  restartedLevel: 0
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0
