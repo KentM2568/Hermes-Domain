@@ -11,6 +11,7 @@ public class HermesBootsPickup : MonoBehaviour
     public Collider hermesBootsCollider;
     public GameObject hermesBootsPickUpObject;
     public bool hasAbsorbedHermesBoots = false;
+    public bool soulBool = false;
     public VisualEffect lightningEffect;
 
 
@@ -38,18 +39,19 @@ public class HermesBootsPickup : MonoBehaviour
  //           Debug.Log("penis fart");
             hermesBootsPickUpObject.SetActive(false);
             helperBool = false;
-
+            
             hasAbsorbedHermesBoots = true;
+            soulBool = true;
         }
 
-        if (restartLevelScript.restartedLevel == true)
+        if (restartLevelScript.restartedBootsLevel == true)
         {
             playerScript.moveSpeed -= 1000 * speedMultiplier;
             playerScript.sonicSpeedForce -= 500 * speedMultiplier;
             playerScript.maxSonicSpeed -= 5000;
 
-            restartLevelScript.restartedLevel = false;
-
+            restartLevelScript.restartedBootsLevel = false;
+            helperBool = true;
             hermesBootsPickUpObject.SetActive(true);
 
             Debug.Log("Subtracted Boots");

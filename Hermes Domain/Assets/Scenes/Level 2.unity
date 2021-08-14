@@ -15153,6 +15153,7 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 804750681}
   hookBoxObject7: {fileID: 804750681}
   playerObject: {fileID: 1682459318}
+  rb: {fileID: 1682459321}
 --- !u!65 &356456984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30978,6 +30979,7 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 804750681}
   hookBoxObject7: {fileID: 804750681}
   playerObject: {fileID: 1682459318}
+  rb: {fileID: 1682459321}
 --- !u!65 &1152139343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37553,7 +37555,8 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 804750681}
   hookBoxObject7: {fileID: 804750681}
   grapplingPickUpObject: {fileID: 482823089}
-  restartedLevel: 0
+  restartedWingsLevel: 0
+  restartedBootsLevel: 0
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0

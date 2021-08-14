@@ -383,14 +383,34 @@ public class WallRunTutorial : MonoBehaviour
         if (grounded && crouching) multiplierV = 0f;
 
         //Apply forces to move player
-        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
-        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+
+        if (rb.velocity.magnitude <= 500)
+        {
+             rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
+             rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+        }
+
 
         if (isGrappling == true)
         {
             rb.AddForce(orientation.transform.forward * y * extraGrappleSpeed * Time.deltaTime * multiplierV);
             rb.AddForce(orientation.transform.right * x * extraGrappleSpeed * Time.deltaTime * multiplierV);
         }
+
+        if(rb.velocity.magnitude >= 350)
+        {
+            rb.velocity = new Vector3(0, 0, 0);
+
+        }
+
+        /*
+        if (rb.velocity.magnitude >= 1000)
+        {
+
+        }
+
+
+        */
     }
 
     private void Jump()

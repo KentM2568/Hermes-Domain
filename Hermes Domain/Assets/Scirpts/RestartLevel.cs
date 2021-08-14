@@ -22,7 +22,8 @@ public class RestartLevel : MonoBehaviour
     public GameObject hookBoxObject7;
     public GameObject grapplingPickUpObject;
 
-    public bool restartedLevel = false;
+    public bool restartedWingsLevel = false;
+    public bool restartedBootsLevel = false;
 
 
     void Update()
@@ -55,14 +56,17 @@ public class RestartLevel : MonoBehaviour
             hookBoxObject6.SetActive(true);
             hookBoxObject7.SetActive(true);
             
-            if (hermesWingsScript.hasAbsorbedHermesWings == true)
+            if (hermesWingsScript.hasAbsorbedHermesWings == true && hermesWingsScript.soulBool == true)
             {
-               restartedLevel = true;
+
+                restartedWingsLevel = true;
+                hermesWingsScript.soulBool = false;
             }
 
-            if (hermesBootsScript.hasAbsorbedHermesBoots == true)
+            if (hermesBootsScript.hasAbsorbedHermesBoots == true && hermesBootsScript.soulBool == true)
             {
-                restartedLevel = true;
+                restartedBootsLevel = true;
+                hermesBootsScript.soulBool = false;
             }
 
             Debug.Log("Restarted");
@@ -96,20 +100,22 @@ public class RestartLevel : MonoBehaviour
         hookBoxObject5.SetActive(true);
         hookBoxObject6.SetActive(true);
         hookBoxObject7.SetActive(true);
-        Debug.Log("Restarted Without Key");
+        
        
-        if (hermesWingsScript.hasAbsorbedHermesWings == true)
+        if (hermesWingsScript.hasAbsorbedHermesWings == true && hermesWingsScript.soulBool == true)
         {
-            restartedLevel = true;
+            restartedWingsLevel = true;
+            hermesWingsScript.soulBool = false;
         }
 
-        if (hermesBootsScript.hasAbsorbedHermesBoots == true)
+        if (hermesBootsScript.hasAbsorbedHermesBoots == true && hermesBootsScript.soulBool == true)
         {
-            restartedLevel = true;
+            restartedBootsLevel = true;
+            hermesBootsScript.soulBool = false;
         }
         //        playerScript.flashCooldown = 1;
 
-
+        Debug.Log("Restarted Without Key");
 
     }
 

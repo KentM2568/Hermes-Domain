@@ -20161,6 +20161,7 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 91458036}
   hookBoxObject7: {fileID: 91458036}
   playerObject: {fileID: 1682459318}
+  rb: {fileID: 1682459321}
 --- !u!65 &255541641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35397,6 +35398,7 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 91458036}
   hookBoxObject7: {fileID: 91458036}
   playerObject: {fileID: 1682459318}
+  rb: {fileID: 1682459321}
 --- !u!65 &544543151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63755,7 +63757,8 @@ MonoBehaviour:
   hookBoxObject6: {fileID: 91458036}
   hookBoxObject7: {fileID: 2108580867}
   grapplingPickUpObject: {fileID: 361243255}
-  restartedLevel: 0
+  restartedWingsLevel: 0
+  restartedBootsLevel: 0
 --- !u!114 &1682459327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63828,6 +63831,7 @@ MonoBehaviour:
   upwardAntiGravityForce: 300
   jumpExtraForwardForceMultiplier: 50
   hasAbsorbedHermesWings: 0
+  soulBool: 0
 --- !u!114 &1682459330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63845,6 +63849,7 @@ MonoBehaviour:
   hermesBootsCollider: {fileID: 946177780}
   hermesBootsPickUpObject: {fileID: 946177778}
   hasAbsorbedHermesBoots: 0
+  soulBool: 0
   lightningEffect: {fileID: 1406709982}
   speedMultiplier: 20
 --- !u!1 &1689428524

@@ -22,6 +22,7 @@ public class HermesWingsPickup : MonoBehaviour
     private bool helperBool = true;
     private bool antiGravBool = false;
     public bool hasAbsorbedHermesWings = false;
+    public bool soulBool = false;
 
     public void Start()
     {
@@ -44,6 +45,8 @@ public class HermesWingsPickup : MonoBehaviour
 
             hasAbsorbedHermesWings = true;
 
+            soulBool = true;
+
 
             
 
@@ -55,14 +58,15 @@ public class HermesWingsPickup : MonoBehaviour
  //           Debug.Log("gravity is off");
         }
 
-        if(restartLevelScript.restartedLevel == true)
+        if(restartLevelScript.restartedWingsLevel == true)
         {
             playerScript.startDoubleJumps -= 1 * extraJumpMultiplier;
             playerScript.jumpForce -= 400;
             playerScript.jumpExtraForwardForce -= jumpExtraForwardForceMultiplier;
 
-            restartLevelScript.restartedLevel = false;
+            restartLevelScript.restartedWingsLevel = false;
 
+            helperBool = true;
             hermesWingsPickUpObject.SetActive(true);
 
             Debug.Log("Subtracted Wings");

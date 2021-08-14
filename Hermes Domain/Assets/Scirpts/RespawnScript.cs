@@ -18,6 +18,7 @@ public class RespawnScript : MonoBehaviour
     public GameObject hookBoxObject6;
     public GameObject hookBoxObject7;
     public GameObject playerObject;
+    public Rigidbody rb;
 
 
 
@@ -34,7 +35,9 @@ public class RespawnScript : MonoBehaviour
         RestartLevel restartLevelScript = playerObject.GetComponent<RestartLevel>();
 
         player.transform.position = respawnPoint.transform.position;
+        rb.velocity = new Vector3(0, 0, 0);
         grapplehookObject.SetActive(false);
+    //    grapplingPickUpObject.SetActive(true);
         hookBoxObject1.SetActive(true);
         hookBoxObject2.SetActive(true);
         hookBoxObject3.SetActive(true);
@@ -42,14 +45,16 @@ public class RespawnScript : MonoBehaviour
         hookBoxObject5.SetActive(true);
         hookBoxObject6.SetActive(true);
         hookBoxObject7.SetActive(true);
-        if (hermesWingsScript.hasAbsorbedHermesWings == true)
+        if (hermesWingsScript.hasAbsorbedHermesWings == true && hermesWingsScript.soulBool == true)
         {
-            restartLevelScript.restartedLevel = true;
+            restartLevelScript.restartedWingsLevel = true;
+            hermesWingsScript.soulBool = false;
         }
 
-        if (hermesBootsScript.hasAbsorbedHermesBoots == true)
+        if (hermesBootsScript.hasAbsorbedHermesBoots == true && hermesBootsScript.soulBool == true)
         {
-            restartLevelScript.restartedLevel = true;
+            restartLevelScript.restartedBootsLevel = true;
+            hermesBootsScript.soulBool = false;
         }
 
 
