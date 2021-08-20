@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RespawnScript : MonoBehaviour
 { 
@@ -45,6 +46,21 @@ public class RespawnScript : MonoBehaviour
         hookBoxObject5.SetActive(true);
         hookBoxObject6.SetActive(true);
         hookBoxObject7.SetActive(true);
+
+        if(SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            HermesItemsCheck();
+        }
+
+
+    }
+
+    public void HermesItemsCheck()
+    {
+        HermesWingsPickup hermesWingsScript = playerObject.GetComponent<HermesWingsPickup>();
+        HermesBootsPickup hermesBootsScript = playerObject.GetComponent<HermesBootsPickup>();
+        RestartLevel restartLevelScript = playerObject.GetComponent<RestartLevel>();
+
         if (hermesWingsScript.hasAbsorbedHermesWings == true && hermesWingsScript.soulBool == true)
         {
             restartLevelScript.restartedWingsLevel = true;
@@ -57,10 +73,9 @@ public class RespawnScript : MonoBehaviour
             hermesBootsScript.soulBool = false;
         }
 
-
     }
     #endregion Actual Respawn Code
-    
+
     #region GrapplingGun Glitch Debugging
     /*
     public GameObject target;

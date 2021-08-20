@@ -172,10 +172,15 @@ public class WallRunTutorial : MonoBehaviour
     bool alreadyStoppedAtLadder;
 
     //Mouse
-    public GameObject pauseMouseObject;
+  //  public GameObject pauseMouseObject;
 
-    //misc
-  //  public String magnitudeString = rb.velocity.magnitude.ToString();
+    //Misc
+    //  public String magnitudeString = rb.velocity.magnitude.ToString();
+    public ParticleSystem dust;
+    public bool canActivateDust = true;
+    public bool groundedActiveDust = false;
+    public Collider playerCollider;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -216,8 +221,24 @@ public class WallRunTutorial : MonoBehaviour
         CheckForWall();
         SonicSpeed();
         WallRunInput();
+        DustEffect();
+
      /// Debug.Log(rb.velocity.magnitude.ToString());
     }
+
+
+    public void DustEffect()
+    {
+
+        if(canActivateDust == true)
+        {
+            CreateDust();
+            canActivateDust = false;
+        }
+
+
+    }
+
 
     /// <summary>
     /// Find user input. Should put this in its own class but im lazy
@@ -420,8 +441,8 @@ public class WallRunTutorial : MonoBehaviour
             readyToJump = false;
 
             //Add jump forces
-            rb.AddForce(Vector2.up * jumpForce * 1f * rb.velocity.magnitude / (rb.velocity.magnitude / 1.2f));
-            rb.AddForce(normalVector * jumpForce * 1f * rb.velocity.magnitude / (rb.velocity.magnitude / 1.2f));
+            rb.AddForce(Vector2.up * jumpForce * 1f);
+            rb.AddForce(normalVector * jumpForce * 1f);
             rb.AddForce(orientation.forward * y * rb.velocity.magnitude  * 0.75f);
 
         /*    //If jumping while falling, reset y velocity.
@@ -441,8 +462,8 @@ public class WallRunTutorial : MonoBehaviour
             rb.AddForce(orientation.forward * y * rb.velocity.magnitude * 1f * jumpExtraForwardForce / (rb.velocity.magnitude / 5f));
             rb.AddForce(orientation.right * x * rb.velocity.magnitude * 1f * jumpExtraSideForce / (rb.velocity.magnitude / 5f));
 
-            rb.AddForce(Vector2.up * jumpForce * 1.5f );
-            rb.AddForce(normalVector * jumpForce * 1f);
+            rb.AddForce(Vector2.up * jumpForce * 1.5f * 1.1f );
+            rb.AddForce(normalVector * jumpForce * 1f * 1.1f);
 
             //Reset Velocity
          //   rb.velocity = Vector3.zero;
@@ -451,6 +472,8 @@ public class WallRunTutorial : MonoBehaviour
             allowDashForceCounter = false;
 
             Invoke(nameof(ResetJump), jumpCooldown);
+
+            
         }
 
         //Walljump
@@ -478,6 +501,8 @@ public class WallRunTutorial : MonoBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+
+        canActivateDust = true;
     }
 
     private void ResetJump()
@@ -777,5 +802,10 @@ public class WallRunTutorial : MonoBehaviour
     private void StopGrounded()
     {
         grounded = false;
+    }
+
+    public void CreateDust()
+    {
+        dust.Play();
     }
 }

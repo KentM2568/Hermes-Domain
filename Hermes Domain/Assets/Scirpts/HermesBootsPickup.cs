@@ -32,9 +32,10 @@ public class HermesBootsPickup : MonoBehaviour
         if (isInRange && helperBool == true && Input.GetKey(KeyCode.E))
         {
             lightningEffect.Play();
-            playerScript.moveSpeed += 1000 * speedMultiplier;
-            playerScript.sonicSpeedForce += 500 * speedMultiplier;
-            playerScript.maxSonicSpeed += 5000;
+            playerScript.moveSpeed += 250 * speedMultiplier;
+            playerScript.sonicSpeedForce += 100 * speedMultiplier;
+            playerScript.maxSonicSpeed += 100000;
+            playerScript.timeBetweenNextSonicBoost += 0.35f;
             playerScript.wallrunForwardMultiplier += 1f;
  //           Debug.Log("penis fart");
             hermesBootsPickUpObject.SetActive(false);
@@ -46,9 +47,10 @@ public class HermesBootsPickup : MonoBehaviour
 
         if (restartLevelScript.restartedBootsLevel == true)
         {
-            playerScript.moveSpeed -= 1000 * speedMultiplier;
-            playerScript.sonicSpeedForce -= 500 * speedMultiplier;
-            playerScript.maxSonicSpeed -= 5000;
+            playerScript.moveSpeed -= 250 * speedMultiplier;
+            playerScript.sonicSpeedForce -= 100 * speedMultiplier;
+            playerScript.maxSonicSpeed -= 100000;
+            playerScript.timeBetweenNextSonicBoost -= 0.35f;
 
             restartLevelScript.restartedBootsLevel = false;
             helperBool = true;
