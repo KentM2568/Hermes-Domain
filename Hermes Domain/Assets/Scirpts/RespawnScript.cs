@@ -47,7 +47,7 @@ public class RespawnScript : MonoBehaviour
         hookBoxObject6.SetActive(true);
         hookBoxObject7.SetActive(true);
 
-        if(SceneManager.GetActiveScene().buildIndex == 6)
+        if (SceneManager.GetActiveScene().buildIndex == 6 || SceneManager.GetActiveScene().buildIndex == 7 || SceneManager.GetActiveScene().buildIndex == 1)
         {
             HermesItemsCheck();
         }
