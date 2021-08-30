@@ -249,6 +249,7 @@ public class WallRunTutorial : MonoBehaviour
         y = Input.GetAxisRaw("Vertical");
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftShift);
+        
 
         //Crouching
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -352,7 +353,11 @@ public class WallRunTutorial : MonoBehaviour
         //Needed that the Ground Check works better!
         float gravityMultiplier = 10f;
 
-        if (crouching) gravityMultiplier = crouchGravityMultiplier;
+        if (crouching)
+        {
+            gravityMultiplier = crouchGravityMultiplier;
+     //       Debug.Log("Crouched, Added Gravity");
+        }
 
         rb.AddForce(Vector3.down * Time.deltaTime * gravityMultiplier);
 
@@ -459,8 +464,8 @@ public class WallRunTutorial : MonoBehaviour
             readyToJump = false;
 
             //Add jump forces
-            rb.AddForce(orientation.forward * y * rb.velocity.magnitude * 1f * jumpExtraForwardForce / (rb.velocity.magnitude / 5f));
-            rb.AddForce(orientation.right * x * rb.velocity.magnitude * 1f * jumpExtraSideForce / (rb.velocity.magnitude / 5f));
+            rb.AddForce(orientation.forward * y * rb.velocity.magnitude * 1f * jumpExtraForwardForce / (rb.velocity.magnitude / 4f));
+            rb.AddForce(orientation.right * x * rb.velocity.magnitude * 1f * jumpExtraSideForce / (rb.velocity.magnitude / 4f));
 
             rb.AddForce(Vector2.up * jumpForce * 1.5f * 1.1f );
             rb.AddForce(normalVector * jumpForce * 1f * 1.1f);
