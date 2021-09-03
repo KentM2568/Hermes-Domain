@@ -31728,7 +31728,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -158}
-  m_SizeDelta: {x: 750, y: 200}
+  m_SizeDelta: {x: 750, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518183151
 MonoBehaviour:
@@ -37019,7 +37019,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 187}
-  m_SizeDelta: {x: 400, y: 200}
+  m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760465062
 MonoBehaviour:
@@ -37318,7 +37318,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -333}
-  m_SizeDelta: {x: 300, y: 200}
+  m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793799683
 MonoBehaviour:
@@ -66587,7 +66587,7 @@ MonoBehaviour:
   hasAbsorbedHermesBoots: 0
   soulBool: 0
   lightningEffect: {fileID: 1406709982}
-  speedMultiplier: 20
+  speedMultiplier: 50
 --- !u!1 &1712557457
 GameObject:
   m_ObjectHideFlags: 0
@@ -67292,12 +67292,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826149481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607df6a91b87f684995a7a55d7a3cce7, type: 3}
+  m_Script: {fileID: 11500000, guid: 26c41e8619652df4d97b10ba49726d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1682459319}
-  exitPoint: {fileID: 1826149482}
-  pauseMenuObj: {fileID: 1431649536}
+  exitPoint: {fileID: 637202042}
+  buildIndexAddition: 1
   isInRange: 0
 --- !u!65 &1826149484
 BoxCollider:
@@ -67588,7 +67588,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 14}
-  m_SizeDelta: {x: 750, y: 200}
+  m_SizeDelta: {x: 750, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1906465088
 MonoBehaviour:
