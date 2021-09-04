@@ -76,6 +76,7 @@ public class GrapplingHook : MonoBehaviour
                     //  this.GetComponent<Rigidbody>().AddForce(orientation.transform.forward * this.GetComponent<WallRunTutorial>().y * rebounceForce * Time.deltaTime * rebounceMultiplier);
                    rb.velocity = new Vector3(0, 0, 0);
                    hookedObj.SetActive(false);
+       //            hook.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
 
 
@@ -101,6 +102,7 @@ public class GrapplingHook : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         ReturnHook();
+
     }
 
     void ReturnHook()
