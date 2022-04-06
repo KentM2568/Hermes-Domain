@@ -21,6 +21,15 @@ public class RestartLevel : MonoBehaviour
     public GameObject hookBoxObject5;
     public GameObject hookBoxObject6;
     public GameObject hookBoxObject7;
+    public GameObject hookBoxObject8;
+    public GameObject hookBoxObject9;
+    public GameObject hookBoxObject10;
+    public GameObject hookBoxObject11;
+    public GameObject hookBoxObject12;
+    public GameObject hookBoxObject13;
+    public GameObject hookBoxObject14;
+    public GameObject hookBoxObject15;
+
     public GameObject grapplingPickUpObject;
 
     public bool restartedWingsLevel = false;
@@ -56,6 +65,14 @@ public class RestartLevel : MonoBehaviour
             hookBoxObject5.SetActive(true);
             hookBoxObject6.SetActive(true);
             hookBoxObject7.SetActive(true);
+            hookBoxObject8.SetActive(true);
+            hookBoxObject9.SetActive(true);
+            hookBoxObject10.SetActive(true);
+            hookBoxObject11.SetActive(true);
+            hookBoxObject12.SetActive(true);
+            hookBoxObject13.SetActive(true);
+            hookBoxObject14.SetActive(true);
+            hookBoxObject15.SetActive(true);
 
 
 

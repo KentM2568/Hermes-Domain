@@ -18,6 +18,14 @@ public class RespawnScript : MonoBehaviour
     public GameObject hookBoxObject5;
     public GameObject hookBoxObject6;
     public GameObject hookBoxObject7;
+    public GameObject hookBoxObject8;
+    public GameObject hookBoxObject9;
+    public GameObject hookBoxObject10;
+    public GameObject hookBoxObject11;
+    public GameObject hookBoxObject12;
+    public GameObject hookBoxObject13;
+    public GameObject hookBoxObject14;
+    public GameObject hookBoxObject15;
     public GameObject playerObject;
     public Rigidbody rb;
 
@@ -46,6 +54,14 @@ public class RespawnScript : MonoBehaviour
         hookBoxObject5.SetActive(true);
         hookBoxObject6.SetActive(true);
         hookBoxObject7.SetActive(true);
+        hookBoxObject8.SetActive(true);
+        hookBoxObject9.SetActive(true);
+        hookBoxObject10.SetActive(true);
+        hookBoxObject11.SetActive(true);
+        hookBoxObject12.SetActive(true);
+        hookBoxObject13.SetActive(true);
+        hookBoxObject14.SetActive(true);
+        hookBoxObject15.SetActive(true);
 
         if (SceneManager.GetActiveScene().buildIndex == 6 || SceneManager.GetActiveScene().buildIndex == 7 || SceneManager.GetActiveScene().buildIndex == 1)
         {
