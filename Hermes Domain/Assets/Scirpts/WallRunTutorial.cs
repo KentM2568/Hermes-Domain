@@ -703,9 +703,9 @@ public class WallRunTutorial : MonoBehaviour
             //While Wallrunning
             //Tilts camera in .5 second
             if (Math.Abs(wallRunCameraTilt) < maxWallRunCameraTilt && isWallRunning && isWallRight)
-                wallRunCameraTilt += Time.deltaTime * maxWallRunCameraTilt * 2;
+                wallRunCameraTilt += maxWallRunCameraTilt * 2;
             if (Math.Abs(wallRunCameraTilt) < maxWallRunCameraTilt && isWallRunning && isWallLeft)
-                wallRunCameraTilt -= Time.deltaTime * maxWallRunCameraTilt * 2;
+                wallRunCameraTilt -= maxWallRunCameraTilt * 2;
 
             //Tilts camera back again
             if (wallRunCameraTilt > 0 && !isWallRight && !isWallLeft)

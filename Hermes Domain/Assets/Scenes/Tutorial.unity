@@ -31251,7 +31251,7 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 128
-  wallrunForce: 12500
+  wallrunForce: 7500
   maxWallrunTime: 10
   maxWallSpeed: 300
   maxWallRunCameraTilt: 15
